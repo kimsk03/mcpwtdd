@@ -1,8 +1,10 @@
-#include <iostream>
+class Soundex {
+};
 
-int main() {
-  std::cout << "test" << std::endl;
+#include "gmock/gmock.h"
 
-  return 0;
+TEST(SoundexEncoding, RetainsSoleLetterOfOneLetterWord) {
+  Soundex soundex;
 }
+
 
