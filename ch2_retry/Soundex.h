@@ -39,12 +39,12 @@ std::string Soundex::Encoding(std::string message) {
 }
 
 std::string Soundex::EncodeChar(char character) {
-  std::map<char, int> map { {'b',1}, {'f',1}, {'p',1}, {'v',1}, 
-			    {'c',2}, {'g',2}, {'j',2}, {'k',2}, {'q',2}, {'s',2}, {'x',2}, {'z',2}, 
-			    {'d',3}, {'t',3}, 
-			    {'l',4}, 
-			    {'m',5}, {'n',5}, 
-			    {'r',6} 
+  std::map<char, int> map { {'b',1}, {'f',1}, {'p',1}, {'v',1},
+			    {'c',2}, {'g',2}, {'j',2}, {'k',2}, {'q',2}, {'s',2}, {'x',2}, {'z',2},
+			    {'d',3}, {'t',3},
+			    {'l',4},
+			    {'m',5}, {'n',5},
+			    {'r',6}
 			  };
   char key = static_cast<char>(std::tolower(character));
   if (map[key]) {
@@ -65,7 +65,7 @@ std::string Soundex::ZeroPad(std::string message) {
     return message + zero_pad;
   }
   else
-    return message.substr(0,3);
+    return message.substr(0,MaxSizeOfString);
 }
 
 std::string Soundex::Head(std::string message) {
